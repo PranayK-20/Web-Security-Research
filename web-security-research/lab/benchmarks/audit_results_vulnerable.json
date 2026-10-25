@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "target": "http://127.0.0.1:5001",
+    "scan_timestamp": "2026-10-25T08:38:52Z",
+    "total_checks": 13,
+    "score_percentage": 7.7,
+    "passed_checks": 1,
+    "failed_checks": 12
+  },
+  "findings": [
+    {
+      "title": "Missing HTTP Header: Content-Security-Policy",
+      "severity": "High",
+      "category": "Security Misconfiguration",
+      "cwe": "CWE-16",
+      "asvs": "V14.4.1",
+      "description": "The server response did not include the required 'Content-Security-Policy' header. Restricts sources of executable scripts, stylesheets, and objects.",
+      "remediation": "Configure the web server or reverse proxy to supply 'Content-Security-Policy' on all HTTP responses.",
+      "status": "FAIL"
+    },
+    {
+      "title": "Missing HTTP Header: Strict-Transport-Security",
+      "severity": "High",
+      "category": "Security Misconfiguration",
+      "cwe": "CWE-16",
+      "asvs": "V9.2.1",
+      "description": "The server response did not include the required 'Strict-Transport-Security' header. Enforces HTTPS communication and blocks SSL stripping.",
+      "remediation": "Configure the web server or reverse proxy to supply 'Strict-Transport-Security' on all HTTP responses.",
+      "status": "FAIL"
+    },
+    {
+      "title": "Missing HTTP Header: X-Content-Type-Options",
+      "severity": "Medium",
+      "category": "Security Misconfiguration",
+      "cwe": "CWE-16",
+      "asvs": "V14.4.2",
+      "description": "The server response did not include the required 'X-Content-Type-Options' header. Prevents MIME-type sniffing by web browsers.",
+      "remediation": "Configure the web server or reverse proxy to supply 'X-Content-Type-Options' on all HTTP responses.",
+      "status": "FAIL"
+    },
+    {
+      "title": "Missing HTTP Header: X-Frame-Options",
+      "severity": "Medium",
+      "category": "Security Misconfiguration",
+      "cwe": "CWE-16",
+      "asvs": "V14.4.3",
+      "description": "The server response did not include the required 'X-Frame-Options' header. Protects against clickjacking and UI redress attacks.",
+      "remediation": "Configure the web server or reverse proxy to supply 'X-Frame-Options' on all HTTP responses.",
+      "status": "FAIL"
+    },
+    {
+      "title": "Missing HTTP Header: Referrer-Policy",
+      "severity": "Low",
+      "category": "Security Misconfiguration",
+      "cwe": "CWE-16",
+      "asvs": "V14.4.4",
+      "description": "The server response did not include the required 'Referrer-Policy' header. Controls how much referrer information is sent with requests.",
+      "remediation": "Configure the web server or reverse proxy to supply 'Referrer-Policy' on all HTTP responses.",
+      "status": "FAIL"
+    },
+    {
+      "title": "Missing HTTP Header: Permissions-Policy",
+      "severity": "Low",
+      "category": "Security Misconfiguration",
+      "cwe": "CWE-16",
+      "asvs": "V14.4.5",
+      "description": "The server response did not include the required 'Permissions-Policy' header. Restricts browser features and device hardware APIs.",
+      "remediation": "Configure the web server or reverse proxy to supply 'Permissions-Policy' on all HTTP responses.",
+      "status": "FAIL"
+    },
+    {
+      "title": "Server Banner Information Disclosure",
+      "severity": "Low",
+      "category": "Information Exposure",
+      "cwe": "CWE-200",
+      "asvs": "V14.1.3",
+      "description": "The 'Server' header exposes detailed software versions: 'Apache/2.4.41 (Ubuntu) PHP/7.4.3 '. This aids adversary reconnaissance.",
+      "remediation": "Disable verbose server tokens in the web server configuration (e.g., ServerTokens Prod in Apache, server_tokens off in Nginx).",
+      "status": "FAIL"
+    },
+    {
+      "title": "Insecure CORS Wildcard Allowed",
+      "severity": "Medium",
+      "category": "Security Misconfiguration",
+      "cwe": "CWE-942",
+      "asvs": "V14.4.5",
+      "description": "Access-Control-Allow-Origin is set to wildcard '*' without origin scoping.",
+      "remediation": "Enforce strict allowlists for trusted domains rather than using wildcard origin reflections.",
+      "status": "FAIL"
+    },
+    {
+      "title": "Session Cookie Missing 'HttpOnly' Flag",
+      "severity": "High",
+      "category": "Cryptographic & Session Hygiene",
+      "cwe": "CWE-1004",
+      "asvs": "V3.4.1",
+      "description": "The session cookie 'session_id=insecure_token_for_alice; Path=/' does not specify 'HttpOnly', allowing client-side scripts (XSS) to read the token.",
+      "remediation": "Add the 'HttpOnly' flag to all Set-Cookie directives for session identifiers.",
+      "status": "FAIL"
+    },
+    {
+      "title": "Session Cookie Missing 'SameSite' Attribute",
+      "severity": "Medium",
+      "category": "Session Management",
+      "cwe": "CWE-1275",
+      "asvs": "V3.4.2",
+      "description": "Cookie 'session_id=insecure_token_for_alice; Path=/' lacks 'SameSite=Strict' or 'SameSite=Lax', increasing susceptibility to CSRF attacks.",
+      "remediation": "Configure 'SameSite=Strict' (or 'SameSite=Lax') on all stateful cookies.",
+      "status": "FAIL"
+    },
+    {
+      "title": "Broken Object Level Authorization (BOLA / IDOR) Detected",
+      "severity": "Critical",
+      "category": "Broken Access Control",
+      "cwe": "CWE-639",
+      "asvs": "V4.2.1",
+      "description": "Endpoint '/api/v1/document?id=103' allowed an unauthenticated caller to retrieve confidential administrative records.",
+      "remediation": "Enforce server-side authorization: scope object retrieval queries strictly to the validated session user identity.",
+      "status": "FAIL"
+    },
+    {
+      "title": "SQL Injection & Raw Query Reflection Detected",
+      "severity": "Critical",
+      "category": "Injection",
+      "cwe": "CWE-89",
+      "asvs": "V5.3.1",
+      "description": "Search endpoint reflected raw SQL string concatenation and executed unescaped query logic.",
+      "remediation": "Replace string-concatenated SQL queries with strongly-typed prepared statements and parameterized inputs.",
+      "status": "FAIL"
+    }
+  ],
+  "passed_checks": [
+    {
+      "title": "Cookie Secure Enforced",
+      "category": "Session Hygiene",
+      "details": "Secure attribute present on authentication cookie.",
+      "status": "PASS"
+    }
+  ]
+}

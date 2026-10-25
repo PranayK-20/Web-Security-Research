@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "target": "http://127.0.0.1:5002",
+    "scan_timestamp": "2026-10-25T08:38:55Z",
+    "total_checks": 13,
+    "score_percentage": 100.0,
+    "passed_checks": 13,
+    "failed_checks": 0
+  },
+  "findings": [],
+  "passed_checks": [
+    {
+      "title": "Header Present: Content-Security-Policy",
+      "category": "Security Headers",
+      "details": "Supplied value: default-src 'self'; script-src 'self'; object-src 'none'; ba...",
+      "status": "PASS"
+    },
+    {
+      "title": "Header Present: Strict-Transport-Security",
+      "category": "Security Headers",
+      "details": "Supplied value: max-age=63072000; includeSubDomains; preload...",
+      "status": "PASS"
+    },
+    {
+      "title": "Header Present: X-Content-Type-Options",
+      "category": "Security Headers",
+      "details": "Supplied value: nosniff...",
+      "status": "PASS"
+    },
+    {
+      "title": "Header Present: X-Frame-Options",
+      "category": "Security Headers",
+      "details": "Supplied value: DENY...",
+      "status": "PASS"
+    },
+    {
+      "title": "Header Present: Referrer-Policy",
+      "category": "Security Headers",
+      "details": "Supplied value: strict-origin-when-cross-origin...",
+      "status": "PASS"
+    },
+    {
+      "title": "Header Present: Permissions-Policy",
+      "category": "Security Headers",
+      "details": "Supplied value: camera=(), microphone=(), geolocation=(), payment=()...",
+      "status": "PASS"
+    },
+    {
+      "title": "Server Header Hardened",
+      "category": "Information Exposure",
+      "details": "Banner obfuscated: 'ProtectedApp/2.0 '",
+      "status": "PASS"
+    },
+    {
+      "title": "Cookie HttpOnly Enforced",
+      "category": "Session Hygiene",
+      "details": "HttpOnly flag present on authentication cookie.",
+      "status": "PASS"
+    },
+    {
+      "title": "Cookie Secure Enforced",
+      "category": "Session Hygiene",
+      "details": "Secure attribute present on authentication cookie.",
+      "status": "PASS"
+    },
+    {
+      "title": "Cookie SameSite Enforced",
+      "category": "Session Hygiene",
+      "details": "SameSite attribute configured on cookie.",
+      "status": "PASS"
+    },
+    {
+      "title": "BOLA / IDOR Access Control Verified",
+      "category": "Access Control",
+      "details": "Unauthorized query to restricted record correctly rejected with HTTP 401.",
+      "status": "PASS"
+    },
+    {
+      "title": "SQL Parameterization Confirmed",
+      "category": "Injection",
+      "details": "Endpoint successfully escaped probe payload using parameterized prepared statement.",
+      "status": "PASS"
+    },
+    {
+      "title": "SSRF Egress Defense Confirmed",
+      "category": "SSRF Prevention",
+      "details": "Backend rejected loopback egress request with HTTP 403.",
+      "status": "PASS"
+    }
+  ]
+}
