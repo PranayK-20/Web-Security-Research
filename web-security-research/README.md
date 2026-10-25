@@ -1,4 +1,9 @@
-# Modern Web Application Security Research & Defense-in-Depth Implementation
+# Web Security Research
+Intern : Pranay Vinod Kadam
+Intern Id : 2404
+Organisation: RedKross Research Foundation
+Assignment: Web Security Research
+Submission deadline: 25 October 2026
 **Threat Modeling, Empirical Vulnerability Analysis, and Automated OWASP ASVS Compliance Verification**
 
 [![Python 3.12](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://www.python.org/)
