@@ -1,9 +1,9 @@
 # Web Security Research
-**Intern :** Pranay Vinod Kadam
-**Intern Id :** 2404
-**Organisation:** RedKross Research Foundation
-**Assignment:** Web Security Research
-**Submission deadline:** 25 October 2026
+1. **Intern :** Pranay Vinod Kadam
+2. **Intern Id :** 2404
+3. **Organisation:** RedKross Research Foundation
+4. **Assignment:** Web Security Research
+5. **Submission deadline:** 25 October 2026
 **Threat Modeling, Empirical Vulnerability Analysis, and Automated OWASP ASVS Compliance Verification**
 
 [![Python 3.12](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://www.python.org/)
