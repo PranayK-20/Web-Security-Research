@@ -17,8 +17,7 @@
 ## 🎥 Explanatory Presentation Video
 
 > **📺 Watch the Explanatory Project Walkthrough Video**:  
-> **[Click Here to Watch the Explanatory Video (YouTube / Google Drive)](https://youtu.be/YOUR_VIDEO_LINK_HERE)**  
-> *(Note for Evaluators: Replace this placeholder with the uploaded Unlisted YouTube or Google Drive video link. Complete video script and presentation slides are documented in [`video/EXPLANATORY_VIDEO_SCRIPT.md`](video/EXPLANATORY_VIDEO_SCRIPT.md) and [`video/SLIDES_OUTLINE.md`](video/SLIDES_OUTLINE.md).)*
+> **[Click Here to Watch the Explanatory Video [https://drive.google.com/file/d/1eAhpO84TD2LK752OidMz9aLLdwC-TM5s/view?usp=sharing]]**  
 
 ---
 
